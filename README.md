@@ -16,9 +16,9 @@ This is my personal portfolio website showcasing my skills, projects, and achiev
 
 ## Live Demo
 You can view the live portfolio here:  
-[Portfolio1 Live](https://username.github.io/Portfolio1/)  
+[Portfolio1 Live](https://your-username.github.io/Portfolio1/)
 
-> Replace `username` with your GitHub username.
+> Replace `your-username` with your GitHub username.
 
 ---
 
@@ -28,4 +28,4 @@ To run the project locally:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/username/Portfolio1.git
+git clone https://github.com/your-username/Portfolio1.git
