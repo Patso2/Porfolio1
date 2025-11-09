@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a0026);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-card {
+  width: 900px;
+  min-height: 500px;
+  display: flex;
+  border-radius: 20px;
+  background: #111;
+  box-shadow: 0 0 35px rgba(128,0,255,0.4);
+  overflow: hidden;
+}
+
+.left {
+  width: 35%;
+  padding: 50px 25px;
+  border-right: 1px solid #222;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid #c400ff;
+  transition: transform 0.6s ease;
+}
+.profile-pic:hover { transform: rotate(360deg); }
+.profile-pic img { width: 100%; height: 100%; object-fit: cover; }
+
+.name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-size: 16px;
+  color: #c400ff;
+  margin-bottom: 20px;
+}
+
+.social a {
+  margin: 0 8px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social a:hover { color: #c400ff; }
+
+.right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px;
+}
+
+.right nav {
+  flex-shrink: 0;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #222;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav a.active {
+  color: #c400ff;
+  border-bottom: 2px solid #c400ff;
+  padding-bottom: 2px;
+}
+
+.section-container {
+  flex: 1;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.right section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  padding: 30px 25px;
+  border-radius: 15px;
+  background: #1a0026;
+  box-shadow: 0 0 30px rgba(128,0,255,0.35);
+  min-height: calc(100% - 60px);
+  transition: all 0.5s ease;
+}
+
+.right section.active {
+  display: block;
+  opacity: 1;
+}
+
+.right section h1 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.right section p, .right section li {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.right section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.nav-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.nav-buttons button {
+  background: #222;
+  color: #c400ff;
+  border: 1px solid #c400ff;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-buttons button:hover {
+  background: #c400ff;
+  color: #111;
+}
+
+@keyframes slideFromRight {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromLeft {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="main-card">
+  <div class="left">
+    <div class="profile-pic">
+      <img src="ifoto-ai_1753423212535.png" alt="Jhonrick Dayangco">
+    </div>
+    <div class="name">Jhonrick Dayangco</div>
+    <div class="role">IT Student</div>
+    <div class="social">
+      <a href="https://www.facebook.com/patso2005"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/patso514/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@patso2912"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <div class="right">
+    <nav>
+      <a class="active" data-target="about">ABOUT</a>
+      <a data-target="services">SERVICES</a>
+      <a data-target="skills">SKILLS</a>
+      <a data-target="achievements">ACHIEVEMENTS</a>
+      <a data-target="education">EDUCATION</a>
+    </nav>
+
+    <div class="section-container">
+      <section id="about" class="active">
+        <h1>ABOUT ME</h1>
+        <p><strong>20 years</strong> / Angono Rizal / <span style="color:#c400ff">Freelance IT</span></p>
+        <p>I am a hardworking and responsible third-year student at Sumulong College of
+           Arts and Sciences, demonstrating determination, academic excellence, 
+           and a commitment to continuous growth.</p>
+      </section>
+
+      <section id="services">
+        <h1>SERVICES</h1>
+        <p>• Web Development<br>• Tech Support<br>• UI/UX Design</p>
+      </section>
+
+      <section id="skills">
+        <h1>SKILLS</h1>
+        <p>• HTML / CSS / JS<br>• Python<br>• Troubleshooting</p>
+      </section>
+
+      <section id="achievements">
+        <h1>ACHIEVEMENTS</h1>
+        <ul>
+          <li><span style="color:#c400ff">TESDA CSS NC II Passer</span></li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h1>EDUCATION</h1>
+        <p><span style="color:#c400ff"><strong>Junior High:</strong></span> Carlos Botong Francisco Memorial National Highschool (2020-2021)</p>
+        <p><span style="color:#c400ff"><strong>Senior High:</strong></span> Sumulong College of Arts and Sciences (2022-2023)</p>
+        <p><span style="color:#c400ff"><strong>College:</strong></span> Sumulong College of Arts and Sciences (2023-Present)</p>
+      </section>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prev">← Previous</button>
+      <button id="next">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('section');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+let currentIndex = 0;
+
+function showSection(index, direction){
+  const current = sections[currentIndex];
+  const next = sections[index];
+
+  current.style.display = 'none';
+  current.classList.remove('active');
+  current.style.transform = 'translateX(0)';
+  current.style.opacity = 0;
+
+  next.style.display = 'block';
+  next.style.opacity = 0;
+  next.style.transform = direction === 'next' ? 'translateX(50px)' : 'translateX(-50px)';
+
+  requestAnimationFrame(() => {
+    next.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+    next.style.transform = 'translateX(0)';
+    next.style.opacity = 1;
+  });
+
+  links.forEach(l => l.classList.remove('active'));
+  links[index].classList.add('active');
+  next.classList.add('active');
+
+  currentIndex = index;
+}
+
+links.forEach((link, i) => {
+  link.addEventListener('click', () => {
+    const direction = i > currentIndex ? 'next' : 'prev';
+    showSection(i, direction);
+  });
+});
+
+prevBtn.addEventListener('click', () => {
+  let newIndex = currentIndex - 1;
+  if(newIndex < 0) newIndex = sections.length - 1;
+  showSection(newIndex, 'prev');
+});
+
+nextBtn.addEventListener('click', () => {
+  let newIndex = currentIndex + 1;
+  if(newIndex >= sections.length) newIndex = 0;
+  showSection(newIndex, 'next');
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</body>
+</html>
