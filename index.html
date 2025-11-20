@@ -9,7 +9,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  /* Darker teal-cyan gradient */
   background: linear-gradient(135deg, #051d2c, #005f6b);
   color: #fff;
   display: flex;
@@ -46,7 +45,6 @@ body {
   transition: all 0.4s ease;
 }
 
-/* Hover: glowing scale effect */
 .profile-pic:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #00ffe0;
@@ -120,7 +118,7 @@ nav a.active {
   display: none;
   padding: 30px 25px;
   border-radius: 15px;
-  background: #0a2a35; /* darker card background to match theme */
+  background: #0a2a35;
   box-shadow: 0 0 30px rgba(0,255,220,0.35);
   min-height: calc(100% - 60px);
   transition: all 0.5s ease;
@@ -220,7 +218,12 @@ nav a.active {
 
       <section id="skills">
         <h1>SKILLS</h1>
-        <p>• HTML / CSS / JS<br>• Python<br>• Troubleshooting</p>
+        <p>• HTML / CSS / JS<br>
+           • Python<br>
+           • Troubleshooting<br>
+           • Cisco Packet Tracer (Network Simulation & Configuration)<br>
+           • Networking Fundamentals (RIP, OSPF, VLANs, Subnetting)
+        </p>
       </section>
 
       <section id="achievements">
@@ -287,15 +290,16 @@ links.forEach((link, i) => {
 
 prevBtn.addEventListener('click', () => {
   let newIndex = currentIndex - 1;
-  if(newIndex < 0) newIndex = sections.length - 1;
+  if (newIndex < 0) newIndex = sections.length - 1;
   showSection(newIndex, 'prev');
 });
 
 nextBtn.addEventListener('click', () => {
   let newIndex = currentIndex + 1;
-  if(newIndex >= sections.length) newIndex = 0;
+  if (newIndex >= sections.length) newIndex = 0;
   showSection(newIndex, 'next');
 });
+;
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
